@@ -1,4 +1,4 @@
-#Project 4 - Soundcloud API
+#Project 4 - Foursquare API
 ![Imgur](http://i.imgur.com/2kSeDCY.png)
 
 ##Do Now 
@@ -49,10 +49,10 @@ This should have already been completed during the [Do Now](doNow.md).
 
 **Before moving on to step two, ensure your HTML is correct by having an instructor confirm you are ready to move on.** 
 
-###2) Obtain a Client ID
-In order to use a company's API you must request access and have them send you an API key. SoundCloud asks you to do this by registering your app on the [SoundCloud Developers Guide](http://web.archive.org/web/20150701150357/http://developers.soundcloud.com/docs) page.
+###2) Obtain a Client ID and Secret
+In order to use a company's API you must request access and have them send you an API key. Foursquare asks you to do this by registering your app on the [Foursquare Developer website](https://foursquare.com/developers/apps) page.
 
-Sign in or create a SoundCloud account to receive you Client ID. After your Client ID has been emailed to you use ```SC.initialize``` to begin using the SoundCloud API.
+Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Secret into your Javascript
 
 
 ###3) Ready the Document
