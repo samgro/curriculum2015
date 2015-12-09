@@ -55,7 +55,7 @@ Now that you have initialized the yourwebapp it is time to "ready" the document.
 ###3) Obtain a Client ID and Secret
 In order to use a company's API you must request access and have them send you an API key. Foursquare asks you to do this by registering your app on the [Foursquare Developer website](https://foursquare.com/developers/apps) page.
 
-Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Secret into your ```script.js```. Add them as variables called ```client_id``` and ```client_secret``` inside your ```ready``` function.
+Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Client Secret into your ```script.js```. Add them as variables called ```client_id``` and ```client_secret``` inside your ```ready``` function.
 
 
 ###4) Make a GET request to the Foursquare API
@@ -65,7 +65,7 @@ You can make a behind-the-scenes (asynchronous) request to Foursquare's API serv
             "?client_id=" + client_id +
             "&client_secret=" + client_secret +
             "&v=20151209" +
-            "&near=nyc"
+            "&near=nyc" +
             "&query=pizza",
             function(data) {
                 // Callback code goes here. This gets executed after receiving data from the Foursquare API.
