@@ -12,7 +12,7 @@ The do now activity for this lesson is to create the html page below in a new Gi
 
 This webpage must also include the following:  
 
-* Three ```script``` tags linked to the following:  
+* Two ```script``` tags linked to the following:  
 
  ```
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
