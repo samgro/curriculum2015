@@ -1,4 +1,4 @@
-#[Do Now] Project 4  - SoundCloud API
+#[Do Now] Project 4  - Foursquare API
 
 The do now activity for this lesson is to create the html page below in a new GitHub repo.
 
