@@ -2,7 +2,7 @@
 
 The do now activity for this lesson is to create the html page below in a new GitHub repo.
 
-**Step one:** Create a new GitHub repo called "pizza-search". Make sure to check "Initialize with a README" so GitHub will initialize the rep for you.
+**Step one:** Create a new GitHub repo called "pizza-search". Make sure to check "Initialize with a README" so GitHub will initialize the repo for you.
 
 **Step two:** Create a new workspace in Cloud9 by cloning that repository
 
