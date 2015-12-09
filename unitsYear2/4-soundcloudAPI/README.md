@@ -14,7 +14,6 @@ Your Manager has laid out the following requirements for the project:
 * The webapp will display the phone numbers of the best pizza places near an entered address.
 * CSS is not a necessary feature for this project 
 
-
 ##Learning Objectives
 By the end of this project the employee will be able to...
 
@@ -33,8 +32,8 @@ By the end of this project the employee will be able to...
 * Client
 * Server
 * API
-* Get 
-* Initialize
+* AJAX
+* Get
 * Callback 
 
 ***
@@ -49,42 +48,47 @@ This should have already been completed during the [Do Now](doNow.md).
 
 **Before moving on to step two, ensure your HTML is correct by having an instructor confirm you are ready to move on.** 
 
-###2) Obtain a Client ID and Secret
-In order to use a company's API you must request access and have them send you an API key. Foursquare asks you to do this by registering your app on the [Foursquare Developer website](https://foursquare.com/developers/apps) page.
-
-Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Secret into your Javascript
-
-
-###3) Ready the Document
+###2) Ready the Document
 Now that you have initialized the yourwebapp it is time to "ready" the document. For information on how to do this, research the [jQuery ready function](https://api.jquery.com/ready/).  
 *Hint: all of the remaining code for this project will fall inside of this .ready function.*
 
+###3) Obtain a Client ID and Secret
+In order to use a company's API you must request access and have them send you an API key. Foursquare asks you to do this by registering your app on the [Foursquare Developer website](https://foursquare.com/developers/apps) page.
 
-###4) Interpret User Input
-Now that the document is ready you must store the user's response in a variable.  
-
-In order to achieve this declare a variable called ```searchButton``` equal to the id of your button (hint: this should have the same name). Then use the ```.click``` function to set the **value**  of the user input to a new variable called ```userChoice```.     
-*Hint: this can be accomplished in 3 lines of code. before moving on to step 5 check this code is working by logging userChoice to the console.*  
-
-###5) SC.get
-Now that you have stored the value of the user input it is time to use it with the SoundCloud API.  
-Now that you have initialized the document and you are ready to interpret user input from the html file you are now ready to call the SoundCloud API to **get** data.  
-
-Call on the SC.get function to get tracks by the genre selected by the userChoice.  
-If you are having an issue with this check out the [Basic Use](http://web.archive.org/web/20150701150357/http://developers.soundcloud.com/docs) section of the SoundCloud API Documentation. Also see the documentation on the SC.get method [here](http://web.archive.org/web/20150701150357/http://developers.soundcloud.com/docs).    
+Sign in or create a Foursquare account and create a new app. You will need to copy and paste the Client ID and Secret into your ```script.js```. Add them as variables called ```client_id``` and ```client_secret``` inside your ```ready``` function.
 
 
-After the SC.get function has been created you must use the .each function of jQuery to then append text within the results id.
+###4) Make a GET request to the Foursquare API
+You can make a behind-the-scenes (asynchronous) request to Foursquare's API server using the jQuery .get() function. Read the [.get() documentation](https://api.jquery.com/jquery.get/) and then copy the code below into your ```ready``` function. Note that you'll need to create variables for ```client_id``` and ```client_secret``` using the values you copy and pasted from the Foursquare Developer website.
 
+        $.get("https://api.foursquare.com/v2/venues/search" +
+            "?client_id=" + client_id +
+            "&client_secret=" + client_secret +
+            "&v=20151209" +
+            "&near=nyc"
+            "&query=pizza",
+            function(data) {
+                // Callback code goes here. This gets executed after receiving data from the Foursquare API.
+            });
 
-###6) Display content
-You are finally ready to start placing text in the form of API references in your HTML page! Use the [SoundCloud API reference](http://web.archive.org/web/20150701150406/https://developers.soundcloud.com/docs/api/reference#tracks) to do this. The example completed code uses track, genre and permalink_url but you may choose any three properties to display on your page for each song. 
+###4) Inspect a response from the Foursquare API
+In the callback from ```.get()```, log the ```data``` variable to the console. Run the website in Chrome, and open View -> Developer -> Javascript console. Expand the data object to see what's inside. Poke around and explore! 
+
+###5) Append the venue name and phone number to the ```#results``` element
+Hint: you can append HTML using [jQuery .append()](http://api.jquery.com/append/).
+
+###6) Use the address input by the user
+Now that the document is ready you must store the user's response in a variable.  See the param ```&near=nyc``` in the sample code? You want to replace "nyc" with a variable for the address, which comes from the text entered by the user in the input field.
+
 
 ####Bonus) 
 Your Manager has offered a stipend of $500 for each of the bonus requirements listed below:  
 
-* Display information about the user next to information about the track. Use the [SoundCloud Developers Guide](http://web.archive.org/web/20150701150402/https://developers.soundcloud.com/) for this documentation
-* Stream a song matching the genre selected. Use the [SoundCloud Developers Guide](developers.soundcloud.com/docs/api/guide) for this documentation.  
+* Let the user search for things other than Pizza
+* Add a "Current location" button that gets the user's current location from the browser
+* Show a thumbnail photo specific to the venue
+* Link to the venue’s website if it exists, or the Foursquare page if it doesn't
+* Add anything else interesting from the API to the results, and spruce up the design
 
 ***
 
