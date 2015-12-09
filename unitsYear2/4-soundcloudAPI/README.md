@@ -5,22 +5,21 @@
 Begin this session by completing the [Do Now](doNow.md) activity.
 
 ##Scope
-You have just been hired by APIs R US inc. This company relies entirely on using API for the many webapps. As a first project they have asked you to make a simple site that calls on the SoundCloud API to test your skills.  
+You have just been hired by APIs R US inc. This company relies entirely on using API for the many webapps. As a first project they have asked you to make a simple site that calls on the Foursquare API to test your skills.  
 Since this is your first project, your manager has provided you with some helpful tools to get started. 
 
 ##Project Criteria
 Your Manager has laid out the following requirements for the project: 
 
-* The webapp will display the Track Title, Genre and URL for songs tagged with the genre the user inputs.
+* The webapp will display the phone numbers of the best pizza places near an entered address.
 * CSS is not a necessary feature for this project 
 
 
 ##Learning Objectives
 By the end of this project the employee will be able to...
 
-* Obtain a Client ID by registering their application with SoundCloud
-* Initialize their application using SC.initialize
-* Get information from an API using SC.get
+* Obtain a Client ID and Secret by registering their application with Forusquare
+* Make an AJAX GET request to the Foursquare API, and examine the results on the console
 * Use jQuery to append text to an HTML page
 
 ##References/Tools
