@@ -21,4 +21,4 @@ This webpage must also include the following:
 * Your input field must be assigned the id "address"
 * Your button must be assigned the id "submit"
 * Below the button must be an empty unordered list with the id "results"
-* Create a file called ```script.js```. Set up a click handler for the submit button that either logs to the console or prints an alert to prepare for the next steps
+* Create a file called ```script.js```. Set up a click handler for the submit button that either logs to the console or prints an alert to prepare for the next steps. Hint: you can "ready" the document. For information on how to do this, research the [jQuery ready function](https://api.jquery.com/ready/).  
